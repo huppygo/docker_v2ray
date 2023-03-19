@@ -8,6 +8,8 @@ docker pull huppygo/open:v2rayclientv1.0
 
 git clone https://github.com/huppygo/docker_v2ray.git
 
+#运行镜像 把宿主机配置文件映射到容器内
+
 docker run -d --restart=always --name v2ray \
   -v /修改成你的目录/v2ray_client/config/v2ray/:/etc/v2ray \
   -v /修改成你的目录/v2ray_client/app.db:/home/NoOne-hub/v2ray/app.db \
