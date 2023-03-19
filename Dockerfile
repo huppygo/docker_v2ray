@@ -1,4 +1,5 @@
-FROM v2ray/official:latest
+FROM alpine:3.14
+
 WORKDIR /home/NoOne-hub/v2ray/
 COPY entrypoint.sh v2ray_client/ ./
 RUN echo "https://mirror.tuna.tsinghua.edu.cn/alpine/v3.8/main/" > /etc/apk/repositories \
@@ -16,11 +17,3 @@ RUN echo "[global]" >> ~/.pip/pip.conf \
 
 RUN pip3 install -r ./requirements.txt --no-cache
 ENTRYPOINT ["./entrypoint.sh"]
-
-
-
-
-
-
-
-
